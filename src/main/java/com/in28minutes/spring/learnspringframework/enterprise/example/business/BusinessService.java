@@ -13,6 +13,12 @@ public class BusinessService {
 	@Autowired
 	private DataService dataService;
 	
+	public BusinessService(DataService dataService) {
+		super();
+		System.out.println("Constructor Injection");
+		this.dataService = dataService;
+	}
+	
 	public long calculateSum() {
 		List<Integer> data = dataService.getData();
 		return data.stream().reduce(Integer::sum).get();

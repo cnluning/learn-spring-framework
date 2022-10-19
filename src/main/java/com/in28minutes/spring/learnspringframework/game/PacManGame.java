@@ -1,6 +1,8 @@
 package com.in28minutes.spring.learnspringframework.game;
 
-//@Component
+import org.springframework.stereotype.Component;
+
+@Component
 public class PacManGame implements GamingConsole {
 	
 	public void up() {
